@@ -291,6 +291,12 @@ angular.module('adf')
         var structureName = {};
         var name = $scope.name;
 
+        $scope.$watch(function(){return model;},function() {
+          if(!angular.equals({}, model)){
+            $rootScope.$broadcast('adfDashboardModified', name, model)
+          }
+        }, true);
+
         // Watching for changes on adfModel
         $scope.$watch('adfModel', function(oldVal, newVal) {
           // has model changed or is the model attribute not set
