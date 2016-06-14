@@ -1721,7 +1721,8 @@ angular.module('adf')
           var opts = {
             scope: editScope,
             templateUrl: adfEditTemplatePath,
-            backdrop: 'static'
+            backdrop: 'static',
+            windowClass: $scope.definition.type
           };
 
           var instance = $uibModal.open(opts);
