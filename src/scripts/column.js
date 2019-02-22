@@ -139,6 +139,7 @@ angular.module('adf')
         handle: '.adf-move',
         ghostClass: 'placeholder',
         animation: 150,
+        forceFallback: true,
         onAdd: function(evt){
           addWidgetToColumn($scope, model, column, evt);
         },
