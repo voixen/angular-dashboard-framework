@@ -29,7 +29,7 @@ angular.module('adf', ['adf.provider', 'adf.locale', 'ui.bootstrap'])
   .value('adfTemplatePath', '../src/templates/')
   .value('rowTemplate', '<adf-dashboard-row row="row" adf-model="adfModel" options="options" edit-mode="editMode" ng-repeat="row in column.rows" />')
   .value('columnTemplate', '<adf-dashboard-column column="column" adf-model="adfModel" options="options" edit-mode="editMode" ng-repeat="column in row.columns" />')
-  .value('adfVersion', '0.11.2');
+  .value('adfVersion', '0.11.4');
 
 /*
  * The MIT License
@@ -200,6 +200,7 @@ angular.module('adf')
         handle: '.adf-move',
         ghostClass: 'placeholder',
         animation: 150,
+        forceFallback: true,
         onAdd: function(evt){
           addWidgetToColumn($scope, model, column, evt);
         },
